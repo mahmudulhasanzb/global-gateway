@@ -1,0 +1,118 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.mulish-font {
+  font-family: "Mulish", sans-serif;
+}
+
+/* universla styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Shared styles */
+
+.nav-container,
+.hero-container,
+.popular-tour-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 16px 16px;
+  border: none;
+  outline: none;
+  background: #ff5400;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* === header & nav style === */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above hero content */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Elegant semi-transparent background */
+  backdrop-filter: blur(12px); /* Premium glassmorphism effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  padding: 25px 0;
+}
+
+/* === hero style === */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-banner img {
+  width: 100%;
+}
+
+.hero-content {
+  position: absolute;
+}
+
+.hero-content > h1 {
+  margin-bottom: 24px;
+}
+
+.hero-content > p {
+  margin-bottom: 48px;
+  max-width: 650px;
+}
+
+.search-box form {
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.search-box form input[type="text"],
+.search-box form select {
+  padding: 16px 16px;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 8px;
+  color: rgba(19, 19, 24, 0.5);
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+}
+
+
+/* === popular tour style === */
+.popular-tour-container{
+  margin-top: 100px;
+}
+
+.popular-tour-container > div > p{
+  color: #131318;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
