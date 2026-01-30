@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Global Gateway</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Responsive Style Link -->
+    <link rel="stylesheet" href="./responsive.css" />
 
     <!-- Tailwind CSS link -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -43,8 +48,8 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <div class="hamburger-menu hidden">
-            <img src="assets/img/hamburger.png" alt="hamburger" />
+          <div class="hamburger-menu">
+            <a href="#"><i class="fa-solid fa-bars text-2xl"></i></a>
           </div>
         </div>
       </nav>
@@ -63,7 +68,7 @@
             />
           </div>
           <div class="hero-content text-center">
-            <h1 class="section-title text-[64px] font-extrabold text-white">
+            <h1 class="text-[64px] font-extrabold text-white">
               Explore Your Travel
             </h1>
             <p class="text-white text-[16px]">
@@ -102,9 +107,13 @@
 
       <!-- Popular Tour section start -->
       <section>
-        <div class="popular-tour-container flex justify-between items-top gap-[53px]">
-          <div class="max-w-[50%]">
-            <h2 class="font-extrabold text-[40px] text-[#131318]">Our Popular Tours</h2>
+        <div
+          class="popular-tour-container flex justify-between items-top gap-[53px]"
+        >
+          <div class="lg:max-w-[50%] md:max-w-[50%]">
+            <h2 class="font-extrabold text-[40px] text-[#131318]">
+              Our Popular Tours
+            </h2>
             <br />
             <p>
               Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra
@@ -117,13 +126,13 @@
             </p>
             <br />
             <p>
-              - Adipiscing ornare pellentesque mauris volutpat tortor vitae platea
-              porta lacus. Lectus suspendisse nullam.
+              - Adipiscing ornare pellentesque mauris volutpat tortor vitae
+              platea porta lacus. Lectus suspendisse nullam.
             </p>
             <br />
             <p>
-              - Accumsan eget et turpis praesent lorem egestas enim elit bibendum.
-              Risus at in.
+              - Accumsan eget et turpis praesent lorem egestas enim elit
+              bibendum. Risus at in.
             </p>
             <br />
             <p>
@@ -136,12 +145,61 @@
             <button class="btn">Read More</button>
           </div>
           <div>
-            <img src="./assets/img/Rectangle 4.png" alt="Himalay" class="w-[100%] h-auto"/>
+            <img
+              src="./assets/img/Rectangle 4.png"
+              alt="Himalay"
+              class="w-[100%] sm:h-[500px] md:h-[500px] "
+            />
           </div>
         </div>
       </section>
       <!-- Popular Tour section end -->
-       
+
+      <!-- Destination section start -->
+      <section>
+        <div class="destination-container">
+          <div class="section-header">
+            <h2>Choose Your Destination</h2>
+            <p>
+              Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra
+              odio sit massa. Sodales dictumst nec nibh pellentesque.
+            </p>
+          </div>
+
+          <div class="destination-grid-container">
+            <div class="destination1">
+              <strong>Maldives</strong>
+              <img src="./assets/img/Rectangle 5.png" alt="" />
+            </div>
+
+            <div class="destination2">
+              <strong>Indonesia</strong>
+              <img src="./assets/img/Rectangle 8.png" alt="" />
+            </div>
+            <div>
+              <strong>Srilanka</strong>
+              <img src="./assets/img/Rectangle 6.png" alt="" />
+            </div>
+            <div class="destination4">
+              <strong>North America</strong>
+              <img src="./assets/img/Rectangle 7.png" alt="" />
+            </div>
+            <div>
+              <strong>Kashmir</strong>
+              <img src="./assets/img/Rectangle 9.png" alt="" />
+            </div>
+            <div class="destination6">
+              <strong>Bangladesh</strong>
+              <img src="./assets/img/Rectangle 11.png" alt="" />
+            </div>
+            <div class="destination7">
+              <strong>Bangladesh</strong>
+              <img src="./assets/img/Rectangle 10.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Destination section end -->
     </main>
   </body>
 </html>
