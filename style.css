@@ -17,21 +17,23 @@
 .nav-container,
 .hero-container,
 .popular-tour-container,
-.destination-container
+.destination-container,
+.why-chose-us-container,
+.deal-container
 {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .btn {
-  padding: 16px 16px;
+  padding: 13px 34px;
   border: none;
   outline: none;
   background: #ff5400;
   border-radius: 8px;
   color: white;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -41,6 +43,7 @@
   text-align: center;
   margin-bottom: 50px;
 }
+
 .section-header > h2 {
   font-size: 40px;
   font-weight: 800;
@@ -135,7 +138,6 @@ header {
   display: none;
 }
 
-
 /* === popular tour style === */
 .popular-tour-container{
   margin-top: 100px;
@@ -151,6 +153,7 @@ header {
 
 /* ====== grid container style ===== */
 .destination-container{
+  margin-bottom: 100px;
 
 }
 
@@ -161,7 +164,6 @@ header {
 }
 
 /* ---- Grid Item Style ---- */
-
 /* way-1 */
 /* .destination1,
 .destination2,
@@ -200,44 +202,148 @@ header {
   height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------------------ */
-/* .grid-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 24px;
-  border: 2px solid #ff5400;
+/* ======== why chose us style ======== */
+.why-chose-us-container{
+  margin-bottom: 100px;
 }
 
-.grid-item{
-  background-image: url('./assets/img/Rectangle 5.png');
-  background-size: contain;
-  background-position: center;
-} */
+.why-chose-us-card-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-chose-us-card-container > div:nth-child(1),
+.why-chose-us-card-container > div:nth-child(2)
+{
+  grid-column: span 2;
+}
+
+.why-chose-us-card-container > div:nth-child(3){
+  grid-area: 3/2/4/4;
+}
+
+
+.why-chose-us-card{
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.card-1{
+  background: #ffc68556;
+  border: 2px solid #f7a74c6f;
+}
+
+.card-2{
+  background: #88e7ff58;
+  border: 2px solid #29cdf663;
+}
+
+.card-3{
+  background: #fe898945;
+  border: 2px solid #e944445e;
+}
+
+.why-chose-us-card img{
+  max-width: 65px;
+}
+
+.why-chose-us-card > h3{
+  font-size: 24px;
+  font-weight: 800;
+  color: #131318;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+/* ========== Deal Style ========== */
+.deal-card{
+  position: relative;
+}
+
+.deal-card > div img{
+  max-width: 100%;
+  min-height: 500px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.transparent-deal-card-content{
+  position: absolute;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 500;
+  max-width: 580px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.742);
+  border-radius: 16px;
+  padding: 50px;
+  border: 2px solid white;
+}
+
+.transparent-deal-card-1,
+.transparent-deal-card-3{
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -50%);
+}
+.transparent-deal-card-2{
+  top: 50%;
+  left: 0%;
+  transform: translate(15%, -50%);
+}
+
+.transparent-deal-card-icon-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transparent-deal-card-icon-container p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #5A5A5D;
+  font-size: 16px;
+}
+
+.transparent-deal-card-icon-container p i{
+  color: #ff5400;
+  font-size: 20px;
+}
+
+.transparent-deal-card-content > h3{
+  font-size: 24px;
+  font-weight: 800;
+  color: #131318;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.transparent-deal-card-content > p{
+  margin-bottom: 16px;
+}
+
+.transparent-deal-card-content > strong{
+  font-size: 20px;
+  font-weight: 800;
+  color: #ff5400;
+}
+
+.transparent-deal-card-content > div .btn{
+  margin-top: 16px;
+}
+
+.all-packg-btn{
+  margin-top: 48px;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
