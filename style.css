@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 .mulish-font {
   font-family: "Mulish", sans-serif;
@@ -19,8 +19,10 @@
 .popular-tour-container,
 .destination-container,
 .why-chose-us-container,
-.deal-container
-{
+.deal-container,
+.perfect-place-container,
+.newsletter-discount-container,
+.footer-container {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -35,9 +37,14 @@
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.section-header{
+.btn:hover {
+  background-color: #ff6b1a;
+}
+
+.section-header {
   max-width: 650px;
   margin: 0 auto;
   text-align: center;
@@ -58,17 +65,17 @@
   line-height: 26px;
 }
 
-.section.destination{
+.section.destination {
   font-size: 16px;
   font-weight: 400;
   color: #131318;
   line-height: 26px;
 }
 
-.card-description{
+.card-description {
   font-size: 16px;
   font-weight: 400;
-  color: #5A5A5D;
+  color: #5a5a5d;
   line-height: 26px;
 }
 /* === header & nav style === */
@@ -76,7 +83,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000; /* Ensures it stays above hero content */
-  background: rgba(255, 245, 245, 0.8); /* Elegant semi-transparent background */
+  background: rgba(
+    255,
+    245,
+    245,
+    0.8
+  ); /* Elegant semi-transparent background */
   backdrop-filter: blur(12px); /* Premium glassmorphism effect */
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -123,7 +135,8 @@ header {
 
 .search-box form input[type="text"],
 .search-box form select {
-  padding: 16px 16px;
+  padding: 10px;
+  width: 100%;
   border: none;
   outline: none;
   background: #fff;
@@ -134,17 +147,32 @@ header {
   display: block;
 }
 
-.hamburger-menu{
+.search-box form > .btn {
+  width: 100%;
+}
+
+.nav-menu li a {
+  transition: all 0.5s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-menu li a:hover {
+  color: #ff5400;
+  border-bottom: 2px solid #ff5400;
+}
+
+/* === hamburger menu style === */
+.hamburger-menu {
   display: none;
 }
 
 /* === popular tour style === */
-.popular-tour-container{
+.popular-tour-container {
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
-.popular-tour-container > div > p{
+.popular-tour-container > div > p {
   color: #131318;
   font-size: 16px;
   font-weight: 400;
@@ -152,15 +180,36 @@ header {
 }
 
 /* ====== grid container style ===== */
-.destination-container{
+.destination-container {
   margin-bottom: 100px;
-
 }
 
-.destination-grid-container{
+.destination-grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+
+.destination1,
+.destination2,
+.destination3,
+.destination4,
+.destination5,
+.destination6,
+.destination7 {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.destination1:hover,
+.destination2:hover,
+.destination3:hover,
+.destination4:hover,
+.destination5:hover,
+.destination6:hover,
+.destination7:hover {
+  scale: .97;
+  opacity: .92;
 }
 
 /* ---- Grid Item Style ---- */
@@ -178,16 +227,16 @@ header {
 .destination-grid-container div:nth-child(2),
 .destination-grid-container div:nth-child(4),
 .destination-grid-container div:nth-child(6),
-.destination-grid-container div:nth-child(7){
+.destination-grid-container div:nth-child(7) {
   grid-column: span 2;
 }
 /* --------------------------- */
 
-.destination-grid-container div{
+.destination-grid-container div {
   position: relative;
 }
 
-.destination-grid-container strong{
+.destination-grid-container strong {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -203,54 +252,57 @@ header {
 }
 
 /* ======== why chose us style ======== */
-.why-chose-us-container{
+.why-chose-us-container {
   margin-bottom: 100px;
 }
 
-.why-chose-us-card-container{
+.why-chose-us-card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
 .why-chose-us-card-container > div:nth-child(1),
-.why-chose-us-card-container > div:nth-child(2)
-{
+.why-chose-us-card-container > div:nth-child(2) {
   grid-column: span 2;
 }
 
-.why-chose-us-card-container > div:nth-child(3){
+.why-chose-us-card-container > div:nth-child(3) {
   grid-area: 3/2/4/4;
 }
 
-
-.why-chose-us-card{
+.why-chose-us-card {
   border-radius: 16px;
   padding: 32px;
   max-width: 570px;
   margin: 0 auto;
+  transition: all 0.3s ease-in-out;
 }
 
-.card-1{
+.why-chose-us-card:hover {
+  scale: 1.01;
+}
+
+.card-1 {
   background: #ffc68556;
   border: 2px solid #f7a74c6f;
 }
 
-.card-2{
+.card-2 {
   background: #88e7ff58;
   border: 2px solid #29cdf663;
 }
 
-.card-3{
+.card-3 {
   background: #fe898945;
   border: 2px solid #e944445e;
 }
 
-.why-chose-us-card img{
+.why-chose-us-card img {
   max-width: 65px;
 }
 
-.why-chose-us-card > h3{
+.why-chose-us-card > h3 {
   font-size: 24px;
   font-weight: 800;
   color: #131318;
@@ -259,18 +311,18 @@ header {
 }
 
 /* ========== Deal Style ========== */
-.deal-card{
+.deal-card {
   position: relative;
 }
 
-.deal-card > div img{
+.deal-card > div img {
   max-width: 100%;
   min-height: 500px;
   margin: 0 auto;
   vertical-align: middle;
 }
 
-.transparent-deal-card-content{
+.transparent-deal-card-content {
   position: absolute;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -284,38 +336,46 @@ header {
 }
 
 .transparent-deal-card-1,
-.transparent-deal-card-3{
+.transparent-deal-card-3 {
   top: 50%;
   left: 50%;
   transform: translate(-15%, -50%);
 }
-.transparent-deal-card-2{
+.transparent-deal-card-2 {
   top: 50%;
   left: 0%;
   transform: translate(15%, -50%);
 }
 
-.transparent-deal-card-icon-container{
+.transparent-deal-card-icon-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.transparent-deal-card-icon-container p{
+.transparent-deal-card-icon-container p {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #5A5A5D;
+  color: #5a5a5d;
   font-size: 16px;
 }
 
-.transparent-deal-card-icon-container p i{
+.transparent-deal-card-icon-container p i {
   color: #ff5400;
   font-size: 20px;
 }
 
-.transparent-deal-card-content > h3{
+.transparent-deal-card-content {
+  transition: all 0.5s ease-in-out;
+}
+
+.transparent-deal-card-content:hover {
+  scale: 1.01;
+}
+
+.transparent-deal-card-content > h3 {
   font-size: 24px;
   font-weight: 800;
   color: #131318;
@@ -323,27 +383,192 @@ header {
   margin-bottom: 16px;
 }
 
-.transparent-deal-card-content > p{
+.transparent-deal-card-content > p {
   margin-bottom: 16px;
 }
 
-.transparent-deal-card-content > strong{
+.transparent-deal-card-content > strong {
   font-size: 20px;
   font-weight: 800;
   color: #ff5400;
 }
 
-.transparent-deal-card-content > div .btn{
+.transparent-deal-card-content > div .btn {
   margin-top: 16px;
 }
 
-.all-packg-btn{
+.all-packg-btn {
   margin-top: 48px;
   margin-bottom: 100px;
 }
 
+/* ========= Perfect Place styles */
+.perfect-place-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 100px;
+}
 
+.perfect-place-container > div > h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #131318;
+  margin-bottom: 24px;
+}
 
+.section-description-2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #131313;
+  line-height: 26px;
+}
 
+/* ======== Newsletter & Discount styles ======== */
+.newsletter-discount-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 100px;
+}
 
+.newsletter-container {
+  align-items: center;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+  border: 2px solid #ff5400;
+  text-align: left;
+  gap: 24px;
+}
 
+.newsletter-content > strong {
+  font-size: 24px;
+  font-weight: 800;
+  color: #131318;
+  margin-bottom: 16px;
+}
+
+.newsletter-content > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a5a5d;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+.newsletter-content > hr {
+  opacity: 0.2;
+  margin-bottom: 24px;
+}
+
+.newsletter-content > form > input[type="text"],
+.newsletter-content > form > input[type="email"] {
+  padding: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgba(69, 69, 69, 0.041);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.newsletter-content > form > .btn {
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+/* ----- Discount Tag image Style ----- */
+.discount-container > div {
+  position: relative;
+}
+
+.discount-container > div > img {
+  vertical-align: middle;
+}
+
+.discount-tag img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -2%);
+  max-width: 50%;
+}
+/* ----------------- Discount Tag Style ---------------------- */
+/* .discount-tag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-30deg) translate(0%);
+  max-width: 350px;
+  margin: 0 auto;
+  background: #ff5400;
+  border-radius: 16px;
+  padding: 30px 45px;
+  color: white;
+  text-align: center;
+} */
+
+/* .discount-tag > small{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+} */
+
+/* .discount-tag > strong{
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+} */
+/* ----------------------------------------- */
+
+/* ================= Footer styles ================= */
+footer {
+  background-color: #e2e2ea94;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-logo {
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.footer-content-text {
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.249);
+}
+
+.footer-content-text > p {
+  margin-top: 15px;
+  margin-bottom: 32px;
+}
+
+.footer-social {
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.footer-social > li > a > i {
+  font-size: 20px;
+}
+
+.footer-copyright {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #131313;
+}
