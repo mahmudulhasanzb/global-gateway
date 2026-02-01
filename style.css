@@ -112,6 +112,9 @@ header {
   width: 100%;
 }
 
+.hero-banner .img-1 {
+  position: relative;
+}
 .hero-banner .img-2 {
   position: absolute;
   top: 0;
